@@ -1,10 +1,5 @@
 [
   {
-    "category": "isp_top",
-    "cost": 1166428.4429,
-    "categories": []
-  },
-  {
     "category": "u_isp_gdma",
     "cost": 178368.6152,
     "categories": [
