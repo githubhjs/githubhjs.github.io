@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>d3 - Hierarchical Pie - Usage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="It's a d3 sample pie chart for interacting with hierarchical data in nice and easy way for user. It's great for showing categories structure.">
+    <meta name="author" content="Piotrek Dąbrowski (yhnavein)">
+
+    <!-- Le styles -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/prettify/prettify.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="vendor/js/html5shiv.js"></script>
+      <link href="vendor/font-awesome/css/font-awesome-ie7.min.css" rel="stylesheet">
+    <![endif]-->
+
+    <link rel="shortcut icon" href="vendor/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="container-narrow">
+
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="usage.html">Usage</a></li>
+          <li><a href="https://github.com/yhnavein/d3-hierarchical-pie"><i class="icon-github icon-large"></i></a></li>
+        </ul>
+        <h3 class="muted">d3 - Hierarchical Pie</h3>
+      </div>
+
+      <hr>
+
+      <div class="marketing">
+        <div class="row-fluid">
+          <div class="span6">
+            <legend>Requirements</legend>
+            <p>For actual use you will need those libraries:</p>
+            <ul>
+              <li><a href="http://jquery.com">jQuery</a></li>
+              <li><a href="https://github.com/janl/mustache.js">Mustache.js</a></li>
+              <li><a href="http://d3js.org/">d3.js</a></li>
+            </ul>
+          </div>
+          <div class="span6">
+            <legend>Suggestions</legend>
+            <p>For simple usage without bothering with customizing code you will need those:</p>
+            <ul>
+              <li><a href="http://getbootstrap.com/2.3.2">Bootstrap v.2+</a></li>
+              <li><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <legend>Configuration</legend>
+
+<pre class="prettyprint linenums">
+var defaults = {
+  //quite obvious ones
+  width             : 400,
+  height            : 250,
+
+  //id of chart, for d3
+  chartId           : null,
+
+  //data to be presented
+  data              : null,
+
+  //css selector with legend
+  legendContainer   : null,
+
+  //difference between pie radius with and without mouse hover
+  hoverRadiusDiff   : 10,
+
+  //css selector with navigation panel
+  navigation        : null,
+
+  //determine if navigation panel should be hidden when showing root
+  hideNavOnRoot     : true,
+
+  //schema of provided data; allows to customize chart, not the data source
+  dataSchema        : {
+    idField       : 'id_category',
+    valueField    : 'cost',
+    childrenField : 'categories'
+  },
+
+  //customizing animations - easings and durations
+  hoverPieAnimation : {
+    easing   : "elastic",
+    duration : 1000
+  },
+  focusAnimation : {
+    easing   : "easeInOutQuart",
+    duration : 100
+  }
+};
+</pre>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <p>&copy; <a href="http://blog.puredev.eu">PureDev</a> 2013</p>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="vendor/jquery-1.10.2.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/d3.min.js"></script>
+    <script src="vendor/mustache.js"></script>
+    <script src="vendor/prettify/prettify.js"></script>
+    <script src="hierarchical-pie.js"></script>
+
+    <script type="text/javascript">
+      // Chart 1
+      $(function() {
+        window.prettyPrint && prettyPrint();
+      });
+    </script>
+  </body>
+</html>
